@@ -49,7 +49,7 @@ function createCard(object){
     card.appendChild(author);
 
     let authorName = document.createElement('span');
-    authorName.classList.textContent = `By ${object['authorName']}`;
+    authorName.textContent = `By ${object['authorName']}`;
     card.appendChild(authorName);
 
     let cardsContainer = document.querySelector('.cards-container');
