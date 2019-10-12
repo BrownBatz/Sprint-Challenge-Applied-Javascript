@@ -21,7 +21,11 @@
 axios.get('https://lambda-times-backend.herokuapp.com/articles')
     .then( (response) => {
         console.log(response.data);
+        response.data.articles.bootstrap.forEach(createCard);
         response.data.articles.javascript.forEach(createCard);
+        response.data.articles.jquery.forEach(createCard);
+        response.data.articles.node.forEach(createCard);
+        response.data.articles.technology.forEach(createCard);
     })
     .catch( (err) => {
         console.log('There was an error: ', err);
